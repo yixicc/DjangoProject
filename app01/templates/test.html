@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>test demo</h1>
+    <div>{{ name }}</div>
+    <div>{{ role }}</div>
+    <div>{{ role.0 }}</div>
+    <div>{{ role.1 }}</div>
+
+    <hr/>
+    <div>
+        {% for item in role %}
+            <span>{{ item }}</span>
+        {% endfor %}
+    </div>
+
+    <hr/>
+    {{ userInfo }}
+    {{ userInfo.name }}
+    {{ userInfo.salary }}
+    {{ userInfo.role }}
+
+    <ul>
+        {% for k,v in userInfo.items %}
+            <li>
+                {{ k }} : {{ v }}
+            </li>
+        {% endfor %}
+    </ul>
+    <hr/>
+    <ul>
+        {% for item in dataList %}
+            <li>
+                {{ item.name }} : {{ item.salary }}
+            </li>
+        {% endfor %}
+    </ul>
+    <hr/>
+    {% if name == "huangyixi" %}
+        <h2>哒哒哒</h2>
+    {% elif name == "huangyixi1" %}
+        <h2>么么么</h2>
+    {% else %}
+        <h2>嘟嘟嘟</h2>
+    {% endif %}
+</body>
+</html>
