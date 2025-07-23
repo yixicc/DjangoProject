@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/info/add/" method="post">
+        {% csrf_token %}
+        <label>username：</label>
+        <input type="text" id="name" name="username" required placeholder="please input username">
+        <label for="pwd">password：</label>
+        <input type="password" id="pwd" name="password" minlength="1" required>
+        <label for="age">age：</label>
+        <input type="text" id="age" name="age"  placeholder="please input age">
+        <label for="data">data：</label>
+        <input type="number" id="data" name="data"  placeholder="please input data" required>
+        <button type="submit">register</button>
+    </form>
+</body>
+</html>
